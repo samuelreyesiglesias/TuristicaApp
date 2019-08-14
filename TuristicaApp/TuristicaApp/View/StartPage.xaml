@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TuristicaApp.View.StartPage" BackgroundColor="SandyBrown">
+    <NavigationPage.TitleView>
+        <Label Text="Bienvenido a Turistica App" HorizontalOptions="CenterAndExpand" TextColor="#fff" FontAttributes="Bold" FontSize="18"></Label>
+    </NavigationPage.TitleView>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary" IconImageSource="menu.png" x:Name="ToolbarIcon" Clicked="ToolbarIcon_Clicked" Text="Turistica App"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Padding="20">
+            <StackLayout Padding="20" Margin="20">
+                <Image Source="turistica.png" HorizontalOptions="Center" />
+                <Label Text="Bienvenido a TuristicaApp"
+                    FontSize="13" TextColor="#fff" HorizontalOptions="CenterAndExpand" />
+                <Button Text="Iniciar App" Clicked="Button_Clicked" 
+                        BorderRadius="20" Padding="4" Margin="5" BackgroundColor="#fff" BorderColor="#444" TextColor="#000000"/>
+                <StackLayout Padding="20" Margin="20" IsVisible="False" x:Name="LoadingImage">
+                    <Label Text="Cargando datos..." TextColor="#fff"  HorizontalOptions="Center" />
+                    <Image Source="loading.gif" HorizontalOptions="Center"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

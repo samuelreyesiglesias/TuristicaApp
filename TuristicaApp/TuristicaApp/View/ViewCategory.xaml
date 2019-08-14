@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TuristicaApp.View.ViewCategory" BackgroundColor="SandyBrown">
+
+
+     <NavigationPage.TitleView>
+        <Label Text="Explorando Turistica App"></Label>
+    </NavigationPage.TitleView>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="menu.png" x:Name="ToolbarIcon"  Text="Turistica App"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" Padding="20">
+            <StackLayout HorizontalOptions="CenterAndExpand" Padding="20">
+                <Image Source="{Binding FotoCategoria}" x:Name="FotoCategoria" MinimumWidthRequest="200" WidthRequest="200" />
+            </StackLayout>
+            <Label Text="{Binding Nombre}" FontSize="25" 
+                   TextColor="#fff" Rotation="-3" x:Name="Nombre"
+                   HorizontalOptions="CenterAndExpand"
+                   />
+            <Label Text="{Binding Descripcion}" FontSize="17" 
+                   TextColor="#eee" Rotation="-3" x:Name="Descripcion"
+                   HorizontalTextAlignment="Center"
+                   />
+            <StackLayout Padding="20" Margin="20" IsVisible="False" x:Name="LoadingImage">
+                <Label Text="Cargando lugares..." Rotation="-5" TextColor="#fff" HorizontalOptions="CenterAndExpand" />
+                <Image Source="loading.gif"/>
+            </StackLayout>
+            <StackLayout x:Name="Layout4Btn" HorizontalOptions="Center">
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

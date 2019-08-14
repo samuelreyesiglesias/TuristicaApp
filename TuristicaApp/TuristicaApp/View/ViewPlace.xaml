@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TuristicaApp.View.ViewPlace" BackgroundColor="SandyBrown">
+
+    <NavigationPage.TitleView>
+        <Label Text="Turistica App" FontSize="19" TextColor="#fff" FontAttributes="Bold" HorizontalOptions="Center"/>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="20">
+                
+                    <Label Text="{Binding Nombre}" TextColor="#fff" FontSize="30" />
+            
+                    <Frame CornerRadius="20" Margin="20">
+                        <Image Source="{Binding FotoPortada}" />
+                    </Frame>
+
+                    <Label Text="{Binding Descripcion}" TextColor="#fff" FontSize="20" />
+                    <Label Text="{Binding Ofrece}" TextColor="#fff" FontSize="14" />
+                    <Label Text="{Binding Precios}" TextColor="#fff" FontSize="14" />
+                    <Label Text="{Binding HorarioAtencion}" TextColor="#fff" FontSize="14" />
+                    <Label Text="{Binding Ubicacion}" TextColor="#fff" FontSize="30" />
+                    <StackLayout Padding="20" Margin="20" IsVisible="False" x:Name="LoadingImage">
+                        <Label Text="Cargando datos..." TextColor="#fff" HorizontalOptions="Center" />
+                        <Image Source="loading.gif" HorizontalOptions="Center"/>
+                    </StackLayout>
+                    <Button Text="Ver mas" x:Name="BtnVerMas" Clicked="BtnVerMas_Clicked" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

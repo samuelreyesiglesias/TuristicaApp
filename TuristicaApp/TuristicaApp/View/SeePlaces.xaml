@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TuristicaApp.View.SeePlaces" BackgroundColor="SandyBrown">
+
+    <NavigationPage.TitleView>
+        <SearchBar Text="Buscar" FontSize="19" TextColor="#fff" FontAttributes="Bold" HorizontalOptions="Center"/>
+    </NavigationPage.TitleView>
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="menu.png" x:Name="ToolbarIcon" Text="Turistica App"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+            <ListView x:Name="ListadoLugares" HasUnevenRows="True" ItemSelected="ListadoLugares_ItemSelected">
+                <ListView.Header>
+                    <StackLayout HeightRequest="60" Orientation="Horizontal">
+                            <Label Text="Estas viendo:" TextColor="#fff" FontSize="20" VerticalTextAlignment="Center" HorizontalOptions="Start" FontAttributes="Italic" />
+                            <Label Text="{Binding Nombre}" TextColor="#fff" FontSize="20" VerticalTextAlignment="Center" HorizontalOptions="Start" FontAttributes="Italic" />
+                    </StackLayout>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell Height="130">
+                            <StackLayout Orientation="Horizontal">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"></RowDefinition>
+                                         <RowDefinition Height="*"></RowDefinition>
+                                         <RowDefinition Height="*"></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding Nombre}" TextColor="#fff" Grid.Row="0" Grid.Column="1" FontSize="18" FontAttributes="Bold"/>
+                                    <Image Source="{Binding FotoPortada}" Grid.Row="0" Grid.Column="0" WidthRequest="75" Grid.RowSpan="3" />
+                                    <Label Text="{Binding Descripcion}" FontSize="15" 
+                                   TextColor="#fff" Grid.Row="1" Grid.Column="1"/>
+                                        <Label Text="{Binding Ubicacion}" TextColor="#efefff" Grid.Row="2" Grid.Column="1" HorizontalOptions="End" FontAttributes="Italic"/>
+                                    </Grid>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.Footer>
+                    <StackLayout BackgroundColor="#000">
+                        <Label Text="Listado de Lugares - Turistica App" TextColor="#fff" FontSize="16" FontAttributes="Italic" HorizontalOptions="Center" />
+                    </StackLayout>
+                </ListView.Footer>
+            </ListView>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
