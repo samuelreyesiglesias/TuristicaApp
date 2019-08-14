@@ -23,11 +23,11 @@
                     <StackLayout HeightRequest="60" Orientation="Horizontal">
                             <Label Text="Estas viendo:" TextColor="#fff" FontSize="20" VerticalTextAlignment="Center" HorizontalOptions="Start" FontAttributes="Italic" />
                             <Label Text="{Binding Nombre}" TextColor="#fff" FontSize="20" VerticalTextAlignment="Center" HorizontalOptions="Start" FontAttributes="Italic" />
-                    </StackLayout>
+                        </StackLayout>
                 </ListView.Header>
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell Height="130">
+                        <ViewCell Height="140">
                             <StackLayout Orientation="Horizontal">
                                 <Grid>
                                     <Grid.RowDefinitions>
@@ -43,7 +43,13 @@
                                     <Image Source="{Binding FotoPortada}" Grid.Row="0" Grid.Column="0" WidthRequest="75" Grid.RowSpan="3" />
                                     <Label Text="{Binding Descripcion}" FontSize="15" 
                                    TextColor="#fff" Grid.Row="1" Grid.Column="1"/>
-                                        <Label Text="{Binding Ubicacion}" TextColor="#efefff" Grid.Row="2" Grid.Column="1" HorizontalOptions="End" FontAttributes="Italic"/>
+                                        <StackLayout Grid.Row="2" Orientation="Horizontal" Grid.Column="1" HorizontalOptions="End">
+                                            <Image Source="ubicacion.png"></Image>
+                                            <Label Text="{Binding Ubicacion}" TextColor="#efefff" 
+                                               HorizontalOptions="End" 
+                                               FontAttributes="Italic"/>
+                                        </StackLayout>
+                                    
                                     </Grid>
                             </StackLayout>
                         </ViewCell>

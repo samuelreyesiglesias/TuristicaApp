@@ -4614,13 +4614,13 @@ containing a value of this type.
         public static final int abc_vector_test=0x7f020053;
         public static final int actualizar=0x7f020054;
         public static final int avd_hide_password=0x7f020055;
-        public static final int avd_hide_password_1=0x7f02013a;
-        public static final int avd_hide_password_2=0x7f02013b;
-        public static final int avd_hide_password_3=0x7f02013c;
+        public static final int avd_hide_password_1=0x7f02013b;
+        public static final int avd_hide_password_2=0x7f02013c;
+        public static final int avd_hide_password_3=0x7f02013d;
         public static final int avd_show_password=0x7f020056;
-        public static final int avd_show_password_1=0x7f02013d;
-        public static final int avd_show_password_2=0x7f02013e;
-        public static final int avd_show_password_3=0x7f02013f;
+        public static final int avd_show_password_1=0x7f02013e;
+        public static final int avd_show_password_2=0x7f02013f;
+        public static final int avd_show_password_3=0x7f020140;
         public static final int design_bottom_navigation_item_background=0x7f020057;
         public static final int design_fab_background=0x7f020058;
         public static final int design_ic_visibility=0x7f020059;
@@ -4841,13 +4841,14 @@ containing a value of this type.
         public static final int notification_bg_normal=0x7f020130;
         public static final int notification_bg_normal_pressed=0x7f020131;
         public static final int notification_icon_background=0x7f020132;
-        public static final int notification_template_icon_bg=0x7f020138;
-        public static final int notification_template_icon_low_bg=0x7f020139;
+        public static final int notification_template_icon_bg=0x7f020139;
+        public static final int notification_template_icon_low_bg=0x7f02013a;
         public static final int notification_tile_bg=0x7f020133;
         public static final int notify_panel_notification_icon_bg=0x7f020134;
         public static final int tooltip_frame_dark=0x7f020135;
         public static final int tooltip_frame_light=0x7f020136;
         public static final int turistica=0x7f020137;
+        public static final int ubicacion=0x7f020138;
     }
     public static final class id {
         public static final int ALT=0x7f0a0039;

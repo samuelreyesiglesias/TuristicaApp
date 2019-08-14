@@ -12,14 +12,13 @@
 
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout Margin="20">
-                
-                    <Label Text="{Binding Nombre}" TextColor="#fff" FontSize="30" />
             
+              <Frame BackgroundColor="Brown" CornerRadius="20">
+                <StackLayout Padding="10" Margin="10">
+                    <Label Text="{Binding Nombre}" TextColor="#fff" FontSize="30" />
                     <Frame CornerRadius="20" Margin="20">
                         <Image Source="{Binding FotoPortada}" />
                     </Frame>
-
                     <Label Text="{Binding Descripcion}" TextColor="#fff" FontSize="20" />
                     <Label Text="{Binding Ofrece}" TextColor="#fff" FontSize="14" />
                     <Label Text="{Binding Precios}" TextColor="#fff" FontSize="14" />
@@ -29,8 +28,10 @@
                         <Label Text="Cargando datos..." TextColor="#fff" HorizontalOptions="Center" />
                         <Image Source="loading.gif" HorizontalOptions="Center"/>
                     </StackLayout>
-                    <Button Text="Ver mas" x:Name="BtnVerMas" Clicked="BtnVerMas_Clicked" />
-            </StackLayout>
+                    <Button Text="Ver mas" x:Name="BtnVerMas" Clicked="BtnVerMas_Clicked" IsVisible="False" />
+                </StackLayout>
+            </Frame>
+                
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
