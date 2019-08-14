@@ -34,7 +34,7 @@ namespace TuristicaApp.View
             {
                 Text = "Ver lugares de " + DataOfCategory.Nombre,
                 TextColor = Color.FromRgb(255, 255, 255),
-                BackgroundColor = Color.FromHex("#000066")
+                BackgroundColor = Color.FromHex("#330000")
             };
             NewButton.Clicked += async (sender, args) =>
             {

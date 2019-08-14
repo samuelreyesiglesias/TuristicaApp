@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="TuristicaApp.View.StartPage" BackgroundColor="SandyBrown">
+             x:Class="TuristicaApp.View.StartPage" BackgroundColor="Maroon">
     <NavigationPage.TitleView>
         <Label Text="Bienvenido a Turistica App" HorizontalOptions="CenterAndExpand" TextColor="#fff" FontAttributes="Bold" FontSize="18"></Label>
     </NavigationPage.TitleView>
@@ -12,18 +12,18 @@
         <ToolbarItem Order="Primary" IconImageSource="menu.png" x:Name="ToolbarIcon" Clicked="ToolbarIcon_Clicked" Text="Turistica App"></ToolbarItem>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Padding="20">
-            <StackLayout Padding="20" Margin="20">
+               <Frame BackgroundColor="#660000" Padding="5" CornerRadius="20">
+                    <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Padding="20">
                 <Image Source="turistica.png" HorizontalOptions="Center" />
                 <Label Text="Bienvenido a TuristicaApp"
-                    FontSize="13" TextColor="#fff" HorizontalOptions="CenterAndExpand" />
+                    FontSize="15" TextColor="#fff" HorizontalOptions="CenterAndExpand" />
                 <Button Text="Iniciar App" Clicked="Button_Clicked" 
-                        BorderRadius="20" Padding="4" Margin="5" BackgroundColor="#fff" BorderColor="#444" TextColor="#000000"/>
+                        BorderRadius="20" Padding="2" Margin="3" BackgroundColor="#fff" BorderColor="#444" TextColor="#000000"/>
                 <StackLayout Padding="20" Margin="20" IsVisible="False" x:Name="LoadingImage">
                     <Label Text="Cargando datos..." TextColor="#fff"  HorizontalOptions="Center" />
                     <Image Source="loading.gif" HorizontalOptions="Center"/>
                 </StackLayout>
             </StackLayout>
-        </StackLayout>
+        </Frame>
     </ContentPage.Content>
 </ContentPage>

@@ -16,52 +16,56 @@
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
-        <ScrollView>
-        <StackLayout>
-            <ListView x:Name="ListadoLugares" HasUnevenRows="True" ItemSelected="ListadoLugares_ItemSelected">
-                <ListView.Header>
-                    <StackLayout HeightRequest="60" Orientation="Horizontal">
-                            <Label Text="Estas viendo:" TextColor="#fff" FontSize="20" VerticalTextAlignment="Center" HorizontalOptions="Start" FontAttributes="Italic" />
-                            <Label Text="{Binding Nombre}" TextColor="#fff" FontSize="20" VerticalTextAlignment="Center" HorizontalOptions="Start" FontAttributes="Italic" />
-                        </StackLayout>
-                </ListView.Header>
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell Height="140">
-                            <StackLayout Orientation="Horizontal">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="*"></RowDefinition>
-                                         <RowDefinition Height="*"></RowDefinition>
-                                         <RowDefinition Height="*"></RowDefinition>
-                                        </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="auto"></ColumnDefinition>
-                                        <ColumnDefinition Width="*"></ColumnDefinition>
-                                    </Grid.ColumnDefinitions>
-                                    <Label Text="{Binding Nombre}" TextColor="#fff" Grid.Row="0" Grid.Column="1" FontSize="18" FontAttributes="Bold"/>
-                                    <Image Source="{Binding FotoPortada}" Grid.Row="0" Grid.Column="0" WidthRequest="75" Grid.RowSpan="3" />
-                                    <Label Text="{Binding Descripcion}" FontSize="15" 
+          <ScrollView Margin="10" Padding="10">
+            <Frame BackgroundColor="#660000" Padding="5" CornerRadius="20">
+                <StackLayout>
+                    <ListView x:Name="ListadoLugares" HasUnevenRows="True" ItemSelected="ListadoLugares_ItemSelected">
+                        <ListView.Header>
+                            <Frame Padding="5" Margin="5" CornerRadius="20" BackgroundColor="Maroon">
+                                <StackLayout HeightRequest="50" Orientation="Horizontal">
+                                    <Image Source="titulos.png"></Image>
+                                    <Label Text="{Binding Nombre}" TextColor="#fff" FontSize="20" VerticalTextAlignment="Center" HorizontalOptions="Start" FontAttributes="Italic" />
+                                </StackLayout>
+                            </Frame>
+                        </ListView.Header>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell Height="140">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"></RowDefinition>
+                                                <RowDefinition Height="*"></RowDefinition>
+                                                <RowDefinition Height="*"></RowDefinition>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="auto"></ColumnDefinition>
+                                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <Label Text="{Binding Nombre}" TextColor="#fff" Grid.Row="0" Grid.Column="1" FontSize="18" FontAttributes="Bold"/>
+                                            <Image Source="{Binding FotoPortada}" Grid.Row="0" Grid.Column="0" WidthRequest="75" Grid.RowSpan="3" />
+                                            <Label Text="{Binding Descripcion}" FontSize="15" 
                                    TextColor="#fff" Grid.Row="1" Grid.Column="1"/>
-                                        <StackLayout Grid.Row="2" Orientation="Horizontal" Grid.Column="1" HorizontalOptions="End">
-                                            <Image Source="ubicacion.png"></Image>
-                                            <Label Text="{Binding Ubicacion}" TextColor="#efefff" 
+                                            <StackLayout Grid.Row="2" Orientation="Horizontal" Grid.Column="1" HorizontalOptions="End">
+                                                <Image Source="ubicacion.png"></Image>
+                                                <Label Text="{Binding Ubicacion}" TextColor="#efefff" 
                                                HorizontalOptions="End" 
                                                FontAttributes="Italic"/>
-                                        </StackLayout>
-                                    
-                                    </Grid>
+                                            </StackLayout>
+
+                                        </Grid>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                        <ListView.Footer>
+                            <StackLayout BackgroundColor="#000">
+                                <Label Text="Listado de Lugares - Turistica App" TextColor="#fff" FontSize="16" FontAttributes="Italic" HorizontalOptions="Center" />
                             </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-                <ListView.Footer>
-                    <StackLayout BackgroundColor="#000">
-                        <Label Text="Listado de Lugares - Turistica App" TextColor="#fff" FontSize="16" FontAttributes="Italic" HorizontalOptions="Center" />
-                    </StackLayout>
-                </ListView.Footer>
-            </ListView>
-        </StackLayout>
+                        </ListView.Footer>
+                    </ListView>
+                </StackLayout>
+            </Frame>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

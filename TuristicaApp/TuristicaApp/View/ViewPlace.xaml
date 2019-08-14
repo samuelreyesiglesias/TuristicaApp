@@ -11,19 +11,21 @@
     </NavigationPage.TitleView>
 
     <ContentPage.Content>
-        <ScrollView>
-            
-              <Frame BackgroundColor="Brown" CornerRadius="20">
-                <StackLayout Padding="10" Margin="10">
-                    <Label Text="{Binding Nombre}" TextColor="#fff" FontSize="30" />
-                    <Frame CornerRadius="20" Margin="20">
+        <ScrollView Margin="10" Padding="10">
+            <Frame BackgroundColor="Brown" CornerRadius="20">
+                <StackLayout Padding="5" Margin="20">
+                    <Label Text="{Binding Nombre}" TextColor="#fff" FontSize="25" FontAttributes="Bold" />
+                    <Frame CornerRadius="5" Margin="5">
                         <Image Source="{Binding FotoPortada}" />
                     </Frame>
                     <Label Text="{Binding Descripcion}" TextColor="#fff" FontSize="20" />
                     <Label Text="{Binding Ofrece}" TextColor="#fff" FontSize="14" />
                     <Label Text="{Binding Precios}" TextColor="#fff" FontSize="14" />
                     <Label Text="{Binding HorarioAtencion}" TextColor="#fff" FontSize="14" />
-                    <Label Text="{Binding Ubicacion}" TextColor="#fff" FontSize="30" />
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="ubicacion.png"></Image>
+                        <Label Text="{Binding Ubicacion}" TextColor="#fff" FontSize="20" />
+                    </StackLayout>
                     <StackLayout Padding="20" Margin="20" IsVisible="False" x:Name="LoadingImage">
                         <Label Text="Cargando datos..." TextColor="#fff" HorizontalOptions="Center" />
                         <Image Source="loading.gif" HorizontalOptions="Center"/>

@@ -12,13 +12,17 @@
         <ToolbarItem IconImageSource="menu.png" x:Name="ToolbarIcon"  Text="Turistica App"></ToolbarItem>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <ScrollView>
+        <ScrollView Margin="10" Padding="10">
+            <Frame BackgroundColor="#660000" Padding="5" CornerRadius="20">
         <StackLayout>
             <ListView x:Name="ListadoCategorias" ItemSelected="ListadoCategorias_ItemSelected" HasUnevenRows="True" BackgroundColor="Brown">
                 <ListView.Header>
-                    <StackLayout HeightRequest="50">
-                        <Label Text="Descubre nuevos sitios" TextColor="#fff" FontSize="20" FontAttributes="Bold"/>
-                    </StackLayout>
+                            <Frame Padding="5" Margin="5" CornerRadius="20" BackgroundColor="Maroon">
+                                <StackLayout HeightRequest="50" Orientation="Horizontal">
+                                    <Image Source="titulos.png"></Image>
+                                    <Label Text="Explorar Turistica App" TextColor="#fff" FontSize="20" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </Frame>
                 </ListView.Header>
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -55,6 +59,7 @@
                 </ListView.Footer>
             </ListView>
         </StackLayout>
+         </Frame>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

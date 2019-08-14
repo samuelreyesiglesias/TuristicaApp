@@ -15,24 +15,37 @@
         <ToolbarItem IconImageSource="menu.png" x:Name="ToolbarIcon"  Text="Turistica App"></ToolbarItem>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout VerticalOptions="Center" Padding="20">
-            <StackLayout HorizontalOptions="CenterAndExpand" Padding="20">
-                <Image Source="{Binding FotoCategoria}" x:Name="FotoCategoria" MinimumWidthRequest="200" WidthRequest="200" />
-            </StackLayout>
-            <Label Text="{Binding Nombre}" FontSize="25" 
-                   TextColor="#fff" Rotation="-3" x:Name="Nombre"
-                   HorizontalOptions="CenterAndExpand"
-                   />
-            <Label Text="{Binding Descripcion}" FontSize="17" 
-                   TextColor="#eee" Rotation="-3" x:Name="Descripcion"
-                   HorizontalTextAlignment="Center"
-                   />
-            <StackLayout Padding="20" Margin="20" IsVisible="False" x:Name="LoadingImage">
-                <Label Text="Cargando lugares..." Rotation="-5" TextColor="#fff" HorizontalOptions="CenterAndExpand" />
-                <Image Source="loading.gif"/>
-            </StackLayout>
-            <StackLayout x:Name="Layout4Btn" HorizontalOptions="Center">
-            </StackLayout>
-        </StackLayout>
+        <ScrollView Margin="20" Padding="10">
+            <Frame Margin="10" Padding="10" BackgroundColor="Brown" CornerRadius="20">
+                    <StackLayout VerticalOptions="Center" Padding="20">
+                    <Frame Padding="5" Margin="5" CornerRadius="20" BackgroundColor="Maroon">
+                        <StackLayout HeightRequest="50" Orientation="Horizontal">
+                            <Image Source="titulos.png"></Image>
+                            <Label Text="Explorando" TextColor="#fff" FontSize="20" FontAttributes="Bold"/>
+                        </StackLayout>
+                    </Frame>
+                    <StackLayout HorizontalOptions="CenterAndExpand" Padding="20">
+                        <Image Source="{Binding FotoCategoria}" x:Name="FotoCategoria" MinimumWidthRequest="200" WidthRequest="200" />
+                    </StackLayout>
+                    <Frame HorizontalOptions="CenterAndExpand" Padding="5" Margin="5" CornerRadius="20" BackgroundColor="Transparent">
+                    <Label Text="{Binding Nombre}" FontSize="25" 
+                       TextColor="#fff"  x:Name="Nombre"
+                       />
+                    </Frame>
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="mapa.png"></Image>
+                    <Label Text="{Binding Descripcion}" FontSize="17" 
+                       TextColor="#eee"  x:Name="Descripcion"
+                       />
+                    </StackLayout>
+                    <StackLayout Padding="20" Margin="20" IsVisible="False" x:Name="LoadingImage">
+                        <Label Text="Loading..." TextColor="#fff" HorizontalOptions="CenterAndExpand" />
+                        <Image Source="loading.gif"/>
+                    </StackLayout>
+                    <StackLayout x:Name="Layout4Btn" HorizontalOptions="Center">
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

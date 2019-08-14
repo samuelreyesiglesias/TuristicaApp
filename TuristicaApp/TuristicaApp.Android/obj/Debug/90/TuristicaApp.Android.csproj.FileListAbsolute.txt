@@ -560,3 +560,5 @@ C:\Users\samuel\source\repos\TuristicaApp\TuristicaApp\TuristicaApp.Android\obj\
 C:\Users\samuel\source\repos\TuristicaApp\TuristicaApp\TuristicaApp.Android\obj\Debug\90\res\drawable\actualizar.png
 C:\Users\samuel\source\repos\TuristicaApp\TuristicaApp\TuristicaApp.Android\obj\Debug\90\res\drawable\inicio.png
 C:\Users\samuel\source\repos\TuristicaApp\TuristicaApp\TuristicaApp.Android\obj\Debug\90\res\drawable\ubicacion.png
+C:\Users\samuel\source\repos\TuristicaApp\TuristicaApp\TuristicaApp.Android\obj\Debug\90\res\drawable\mapa.png
+C:\Users\samuel\source\repos\TuristicaApp\TuristicaApp\TuristicaApp.Android\obj\Debug\90\res\drawable\titulos.png

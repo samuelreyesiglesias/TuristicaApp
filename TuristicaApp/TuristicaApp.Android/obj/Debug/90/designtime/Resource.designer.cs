@@ -6294,7 +6294,10 @@ namespace TuristicaApp.Droid
 			public const int loading = 2130771972;
 			
 			// aapt resource value: 0x7F010005
-			public const int menu = 2130771973;
+			public const int mapa = 2130771973;
+			
+			// aapt resource value: 0x7F010006
+			public const int menu = 2130771974;
 			
 			// aapt resource value: 0x7F090106
 			public const int mr_button_connected_dark = 2131296518;
@@ -6401,17 +6404,20 @@ namespace TuristicaApp.Droid
 			// aapt resource value: 0x7F09000C
 			public const int notify_panel_notification_icon_bg = 2131296268;
 			
+			// aapt resource value: 0x7F010007
+			public const int titulos = 2130771975;
+			
 			// aapt resource value: 0x7F09006F
 			public const int tooltip_frame_dark = 2131296367;
 			
 			// aapt resource value: 0x7F090070
 			public const int tooltip_frame_light = 2131296368;
 			
-			// aapt resource value: 0x7F010006
-			public const int turistica = 2130771974;
+			// aapt resource value: 0x7F010008
+			public const int turistica = 2130771976;
 			
-			// aapt resource value: 0x7F010007
-			public const int ubicacion = 2130771975;
+			// aapt resource value: 0x7F010009
+			public const int ubicacion = 2130771977;
 			
 			static Drawable()
 			{
